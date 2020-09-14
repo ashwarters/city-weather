@@ -2,7 +2,7 @@
 
 function getWeather() {
 
-    var searchTerm = document.getElementById("search-term").value;
+    var cityInput = document.getElementById("city-input").value;
     var clearHistory = document.getElementById("clear-history");
     var locationEl = document.getElementById("location");
     var temperatureEl = document.getElementById("temp");
@@ -17,7 +17,7 @@ function getWeather() {
 //display weather with function and for/then
 function displayWeather(location){
 fetch(
-    'api.openweathermap.org/data/2.5/forecast?q=' + searchTerm + '&appid=' + APIKey);
+    'api.openweathermap.org/data/2.5/forecast?q=' + cityInput + '&appid=' + APIKey);
 console.log(worked);
 }
 .then(function(response){
